@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(204, 43%, 93%);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Karla", sans-serif;
+}
+
+main {
+    width: 620px;
+    display: grid;
+    grid-auto-rows: 250px;
+
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 15px 0px;
+}
+
+.item1 {
+    background-color: white;
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+
+    & h1 {
+        color: hsl(179, 62%, 43%);
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    
+    & h2 {
+        color: hsl(71, 73%, 54%);
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    & p {
+        color: hsl(218, 22%, 67%);
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 25px;
+    }
+}
+
+.item2 {
+    background-color: hsl(179, 62%, 43%);
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    
+    & h2 {
+        color: white;
+        font-size: 1em;
+        margin: 10px 0 15px 0;
+    }
+    
+    & div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    & strong {
+        color: white;
+        font-size: 2em;
+    }
+    
+    & span {
+        margin-left: 10px;
+        color: rgba(255, 255, 255, 0.614);
+        
+    }
+    
+    & p {
+        color: white;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 25px;
+        margin-top: 10px;
+    }
+
+    & button {
+        background-color: hsl(71, 73%, 54%);
+        color: rgba(255, 255, 255, 0.789);
+        font-weight: bold;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        margin: 15px 0;
+        box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 15px 0px;
+    }
+
+    & button:hover {
+        background-color: white;
+        color: hsl(71, 73%, 54%);
+    }
+}
+.item3 {
+    background-color: hsl(179, 40%, 54%);
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    
+    & h2 {
+        color: white;
+        font-size: 1em;
+        margin: 5px 0 12px 0;
+    }
+
+    & p {
+        color: rgba(255, 255, 255, 0.614);
+        line-height: 24px;
+        font-size: 0.9em;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    color: hsla(179, 40%, 54%, 0.814);
+
+    & a {
+        color: hsla(179, 40%, 54%, 0.814);
+        outline-style: none;
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 500px){
+    main {
+        margin: 80px 40px;
+        grid-template-columns: repeat(1, 1rf);
+    }
+
+    .item1 {
+        background-color: white;
+        grid-column: span 1;
+    }
+
+    footer {
+        width: 100%;
+        background-color: hsla(203, 44%, 93%, 0.7);
+    }
+
+}
